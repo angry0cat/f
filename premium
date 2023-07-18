@@ -1,0 +1,69 @@
+if getgenv().Niggerssss then warn('ALREADY EXECUTED BOZO') return end getgenv().Niggerssss = true
+if not getgenv().Lasered then warn('use loadstring bozo') return end
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+local Anti_Mouse = false
+local Anti_Vel = false
+if getgenv().Lasered.Velocity.Enabled then
+    game:GetService("RunService").Heartbeat:Connect(
+        function() if Anti_Vel then
+            local v = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity =
+            Vector3.new(getgenv().Lasered.Velocity.X, getgenv().Lasered.Velocity.Y, getgenv().Lasered.Velocity.Z)
+            game:GetService("RunService").RenderStepped:Wait()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = v
+        end
+    end)
+end
+
+if getgenv().Niggerssss then warn('ALREADY EXECUTED BOZO') return end getgenv().Niggerssss = true
+if not getgenv().Lasered then warn('use loadstring bozo') return end
+local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+local Anti_Mouse = false
+local Anti_Vel = false
+if getgenv().Lasered.Velocity.Enabled then
+    game:GetService("RunService").Heartbeat:Connect(
+        function() if Anti_Vel then
+            local v = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity =
+            Vector3.new(getgenv().Lasered.Velocity.X, getgenv().Lasered.Velocity.Y, getgenv().Lasered.Velocity.Z)
+            game:GetService("RunService").RenderStepped:Wait()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = v
+        end
+    end)
+end
+
+Mouse.KeyDown:Connect(function(Key_1)
+    if Key_1 == getgenv().Lasered.Velocity.Keybind:lower() then
+        Anti_Vel = not Anti_Vel
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Sky-Anti " ..tostring(Anti_Vel),
+            Text = "SINTABLE >>",
+        })
+    end
+end)
+
+if getgenv().Lasered.Mouse_Control.Enabled then
+    game:GetService("RunService").Heartbeat:Connect(
+        function() if Anti_Mouse then
+            local v = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = Mouse.Hit.p
+            game:GetService("RunService").RenderStepped:Wait()
+            game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.AssemblyLinearVelocity = v
+        end
+    end)
+end
+
+Mouse.KeyDown:Connect(function(Key_2)
+    if Key_2 == getgenv().Lasered.Mouse_Control.Keybind:lower() then
+        Anti_Mouse = not Anti_Mouse
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = "Mouse-Anti " ..tostring(Anti_Mouse),
+            Text = "SINTABLE >>",
+        })
+    end
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Premium Anti-Lock Loaded",
+    Text = "SINTABLE >>",
+})
